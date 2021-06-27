@@ -1,7 +1,7 @@
 <?php
 
 require_once "Queries.php";
-require_once "../configuration/configuration.php";
+require_once "../configuration/Configuration.php";
 
 /**
  * Encapsula una instancia de mysqli de forma que solo haya un punto
