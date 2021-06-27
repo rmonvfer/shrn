@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>SHERN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64e31548f0.js"></script>
+    <link href="/static/css/reset.css" rel="stylesheet" >
+    <link href="/static/css/general.css" rel="stylesheet" >
+    <link href="/static/css/grid.css" rel="stylesheet" >
+</head>
+<body>
+<nav class="landing">
+    <ul>
+        <li>
+            <a class="logo" href="/">
+                SHRN
+            </a>
+        </li>
+        <li id="login-button">
+            <a class="button" href="/user/login.php">
+                <em class="fas fa-sign-in-alt"></em>
+                Entrar
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section id="home-section" class="container">
+        <h1>Preguntas frecuentes</h1>
+
+        <div class="qcard">
+            <h2>¿Qué es shodan?</h2>
+            <p>
+                Shodan es un buscador especializado en dispositivos conectados (también denominados IoT),
+                bases de datos, servidores... Shodan busca de manera constante nuevos dispositivos en Internet
+                y los indexa para que puedas buscarlos,
+            </p>
+        </div>
+
+        <div class="qcard">
+            <h2>¿No necesito una API Key?</h2>
+            <p>
+                En teoría si, pero Shodan permite generar claves de API para pruebas y eso es justo lo que hace esta web,
+                cuando creas una cuenta se asigna automáticamente una de estas claves para que puedas ejecutar las
+                consultas compartidas por el resto de miembros de la comunidad.
+            </p>
+        </div>
+
+        <div class="qcard qcard-center qcard-dark">
+            <h2>¿Aún no te has registrado?</h2>
+            <a class="button button-cta" href="/user/register.php">Regístrate</a>
+        </div>
+
+        <div class="qcard">
+            <h2>¿Que más puedo hacer?</h2>
+            <p>
+                Hemos creado una sección específica para responder a esa pregunta, haz clic <a href="howto.html">aquí</a>
+                para ver una descripción más detallada de todas las funcionalidades de Shrn.
+            </p>
+            <p>
+                En resumen, puedes publicar y leer consultas (usando el lenguaje específico de consulta de Shodan),
+                publicar comentarios, ejecutar consultas en directo e incluso puedes filtrar los resultados de una consulta
+                concreta según tu localización.
+            </p>
+            <p>
+                Existen otras funcionalidades avanzadas como la importación/exportación a SQSF (un formato especial basado
+                en XML que te permite guardar una copia de seguridad de tus consultas y comentarios publicados) y la
+                conversión a JSON, otro formato muy popular de intercambio de datos.
+            </p>
+        </div>
+
+        <div class="qcard">
+            <h2>¿Cómo puedo ponerme en contacto contigo?</h2>
+            <p>
+                Ahora mismo esto es un proyecto sin ninguna pretensión más allá de aprobar una asignatura, si tienes
+                curiosidad por saber más acerca de este sitio web puedes enviarme un
+                <a href="mailto:uo272582@uniovi.es">email</a>, ¡aunque no prometo contestar!
+            </p>
+        </div>
+
+        <div class="qcard qcard-center qcard-dark">
+            <h3>¿Aún más preguntas?</h3>
+            <a class="button button-cta" href="howto.html">Guía de usuario</a>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Hecho por <a href="https://github.com/rmonvfer">Ramón Vila</a> para Software y Estándares para la Web</p>
+    <p>Oviedo, 2021</p>
+</footer>
+</body>
+</html>

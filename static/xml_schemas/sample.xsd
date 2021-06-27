@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="sqsf">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DocumentInfo"/>
+        <xs:element ref="SharedQueries"/>
+      </xs:sequence>
+      <xs:attribute name="version" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocumentInfo">
+    <xs:complexType>
+      <xs:attribute name="authorid" use="required"/>
+      <xs:attribute name="export_ts" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SharedQueries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Query"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Query">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="QTitle"/>
+        <xs:element ref="QContent"/>
+        <xs:element ref="QDescription"/>
+        <xs:element ref="QComments"/>
+      </xs:sequence>
+      <xs:attribute name="qauthorid" use="required"/>
+      <xs:attribute name="qdbid" use="required"/>
+      <xs:attribute name="qvotes" use="required" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QTitle" type="xs:string"/>
+  <xs:element name="QContent" type="xs:string"/>
+  <xs:element name="QDescription" type="xs:string"/>
+  <xs:element name="QComments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="QComment"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QComment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Content"/>
+        <xs:element ref="Rating"/>
+      </xs:sequence>
+      <xs:attribute name="author_id" use="required"/>
+      <xs:attribute name="post_ts" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Content" type="xs:string"/>
+  <xs:element name="Rating" type="xs:integer"/>
+</xs:schema>

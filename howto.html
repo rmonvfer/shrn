@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>SHERN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64e31548f0.js"></script>
+    <link href="/static/css/reset.css" rel="stylesheet" >
+    <link href="/static/css/general.css" rel="stylesheet" >
+    <link href="/static/css/grid.css" rel="stylesheet" >
+</head>
+<body>
+<nav class="landing">
+    <ul>
+        <li>
+            <a class="logo" href="/">
+                SHRN
+            </a>
+        </li>
+        <li id="login-button">
+            <a class="button" href="/user/login.php">
+                <em class="fas fa-sign-in-alt"></em>
+                Entrar
+            </a>
+        </li>
+    </ul>
+</nav>
+<main>
+    <section id="home-section" class="container">
+        <h1>Breve guía de usuario</h1>
+
+        <div class="qcard">
+            <h2>Introducción</h2>
+            <p>
+                Shrn es una plataforma que conecta a investigadores de ciberseguridad IoT con profesionales que trabajan
+                asegurando este tipo de sistemas (<em>pentesters</em>, <em>bug bounty hackers</em>...).
+            </p>
+            <p>
+                Los usuarios deberán registrarse para poder hacer uso de la plataforma, ya que todas las acciones
+                están asociadas a una cuenta de usuario. Algunas son:
+            </p>
+            <ul>
+                <li>Creación de consultas (posts)</li>
+                <li>Comentario de consultas publicadas</li>
+                <li>Votación de comentarios y consultas</li>
+                <li>Importación y exportación de consultas y comentarios</li>
+            </ul>
+            <p>
+                No es necesaria una clave de API para llevar a cabo estas acciones porque Shrn genera una automáticamente
+                mediante un servicio habilitado por Shodan.
+            </p>
+        </div>
+
+        <div class="qcard">
+            <h2>Operaciones básicas</h2>
+            <p>
+                Las operaciones que se describen a continuación constituyen el núcleo de la interacción del usuario
+                con la plataforma, de manera que este tendría una experiencia completa limitándose a usar tan solo estas.
+            </p>
+            <p>
+                Se supone que el usuario ya dispone de una cuenta y que ha iniciado sesión. Puede encontrarse más información
+                al respecto en la página de <a href="/">inicio</a>
+            </p>
+            <h3>Creación de consultas</h3>
+            <p>
+                Para crear una consulta el usuario deberá dirigirse a la página de creación de consultas seleccionando
+                el apartado correspondiente en la barra de navegación superior y posteriormente haciendo clic en la opción
+                de "Nueva Consulta". Alternativamente puede acceder mediante este <a href="/query/new.php">enlace</a>
+            </p>
+            <p>
+                El usuario podrá ver el formulario de creación de consulta que deberá rellenar con los datos que se
+                indican en el mismo:
+            </p>
+            <ul>
+                <li>Título de la consulta</li>
+                <li>Descripción</li>
+                <li>Contenido (la consulta en sí)</li>
+            </ul>
+            <p>
+                Finalmente, si no aparece ningún error, la consulta estaría creada y el usuario sería redirigido a la
+                sección de consultas publicadas.
+            </p>
+
+            <h3>Publicación de comentarios</h3>
+            <p>
+                Desde la sección principal ("Comunidad"), el usuario verá una lista de consultas publicadas por otros
+                usuarios (no aparece la suya propia), al seleccionar una de ellas haciendo clic en la misma será
+                redirigido a una sección de detalle de la consulta.
+            </p>
+            <p>
+                Una vez allí, haciendo uso del botón "Mostrar comentarios" el usuario podrá ver un listado de los
+                comentarios ya publicados en la consulta. Para enviar un comentario tan solo debe rellenar la caja
+                de texto y pulsar "Enviar"
+            </p>
+        </div>
+
+        <div class="qcard qcard-center qcard-dark">
+            <h4>¿Aún no te has registrado?</h4>
+            <a class="button button-cta" href="/user/register.php">Regístrate</a>
+        </div>
+
+        <h2>Funcionalidad avanzada</h2>
+        <p>
+            Shrn soporta una serie de funciones diseñadas para usuarios con la necesidad de guardar una copia
+            de seguridad de sus consultas y/o comentarios. En concreto:
+        </p>
+
+        <div class="row">
+            <div class="column qcard">
+                <h3>Importado</h3>
+                <p>
+                    De documentos SQSF y XML. La importación restaura las consultas y comentarios publicados por el
+                    usuario propietario del documento exportado (comprobado en el momento de la importación)
+                </p>
+            </div>
+            <div class="column qcard">
+                <h3>Conversión</h3>
+                <p>
+                    En el momento de la importación es posible generar un archivo JSON para emplear los datos de la
+                    consulta en otras herramientas.
+                </p>
+            </div>
+            <div class="column qcard">
+                <h3>Exportado</h3>
+                <p>
+                    A formato SQSF, basado en XML y de uso interno para gestionar el procedimiento de copia de seguridad
+                    y restauración de consultas y comentarios.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Hecho por <a href="https://github.com/rmonvfer">Ramón Vila</a> para Software y Estándares para la Web</p>
+    <p>Oviedo, 2021</p>
+</footer>
+</body>
+</html>

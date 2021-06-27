@@ -1,0 +1,23 @@
+<!ELEMENT sqsf (DocumentInfo|SharedQueries)*>
+<!ATTLIST sqsf
+        version CDATA #REQUIRED>
+<!ELEMENT DocumentInfo (#PCDATA)>
+<!ATTLIST DocumentInfo
+        export_ts CDATA #REQUIRED
+        authorid CDATA #REQUIRED>
+<!ELEMENT SharedQueries (Query)+>
+<!ELEMENT Query (QTitle|QContent|QDescription|QComments)*>
+<!ATTLIST Query
+        qauthorid CDATA #REQUIRED
+        qdbid CDATA #REQUIRED
+        qvotes CDATA #REQUIRED>
+<!ELEMENT QTitle (#PCDATA)>
+<!ELEMENT QContent (#PCDATA)>
+<!ELEMENT QDescription (#PCDATA)>
+<!ELEMENT QComments (QComment)*>
+<!ELEMENT QComment (Content|Rating)+>
+<!ATTLIST QComment
+        author_id CDATA #REQUIRED
+        post_ts CDATA #REQUIRED>
+<!ELEMENT Content (#PCDATA)>
+<!ELEMENT Rating (#PCDATA)>
