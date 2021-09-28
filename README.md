@@ -20,4 +20,4 @@ I know that most of the codebase:
  - Poorly designed
  - Partialy translated
  
-Bear in mind that these are the result of some requirements I had to meet in order to pass the subject so please, don't take it seriously!
+Keep in mind that these are the results of some requirements I had to meet in order to pass the subject, so please, don't take it seriously!
