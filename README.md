@@ -5,7 +5,7 @@ _Project made for the Web Software and Standards course (fall semester 20/21) at
 
 It showcases a simple social network where users can post Shodan queries along with a description and also comment and vote on other's publications.
 Because of the specific requirements of the subject an import/export functionality is available, allowing registered 
-users to download their published queries using an XML-based formated (namely SQSF (_Shareable Shodan Query Format_)) whose
+users to download their published queries using an XML-based format (namely SQSF (_Shareable Shodan Query Format_)) whose
 XML schema and DTD are included in the source tree.
 
 Other functionality such as client-side XML validation and common database operations (CRUD only) are also included.
